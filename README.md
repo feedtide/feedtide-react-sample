@@ -15,9 +15,27 @@ Open [http://localhost:5173](http://localhost:5173).
 
 ## What's included
 
-- **Drop-in widget** — the floating `<FeedTideWidget />` FAB in the bottom-right corner
-- **Headless hooks demo** — custom UI built with `useFeatures()`, `useVote()`, and `useFeedback()`
-- **Mock API server** — a zero-dependency Vite middleware plugin that handles `/api/features`, `/api/vote`, and `/api/feedback` with in-memory state
+The sample demonstrates two ways to use `<FeedTideWidget />`. Toggle between them using the buttons in the top-right corner.
+
+### Standalone mode
+
+Config props (`appId`, `theme`, etc.) are passed directly to `<FeedTideWidget />` — no provider needed. Best for simple, single-widget setups.
+
+```tsx
+<FeedTideWidget appId="app_abc" theme="shiny-light" position="bottom-right" />
+```
+
+### Provider mode
+
+Config is shared via `<FeedTideProvider>`, and the widget inherits it from context. Use this when you need hooks (`useFeatures`, `useVote`, `useFeedback`) or multiple components sharing config.
+
+```tsx
+<FeedTideProvider appId="app_abc" theme="shiny-light">
+  <FeedTideWidget position="bottom-right" />
+</FeedTideProvider>
+```
+
+Props passed directly to the widget override provider values, so both approaches can be mixed.
 
 ## Local development (linked library)
 
