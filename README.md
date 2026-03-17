@@ -30,7 +30,7 @@ Config props (`appId`, `theme`, etc.) are passed directly to `<FeedTideWidget />
 Config is shared via `<FeedTideProvider>`, and the widget inherits it from context. Use this when you need hooks (`useFeatures`, `useVote`, `useFeedback`) or multiple components sharing config.
 
 ```tsx
-<FeedTideProvider appId="app_abc" theme="shiny-light">
+<FeedTideProvider appId="app_abc" theme="light">
   <FeedTideWidget position="bottom-right" />
 </FeedTideProvider>
 ```

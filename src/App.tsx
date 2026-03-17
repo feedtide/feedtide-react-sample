@@ -27,7 +27,7 @@ function StandaloneDemo() {
 
       <FeedTideWidget
         appId="app_mlvms260Wex3bcTu"
-        theme="shiny-light"
+        theme="light"
         position="bottom-right"
       />
     </>
@@ -36,7 +36,7 @@ function StandaloneDemo() {
 
 function ProviderDemo() {
   return (
-    <FeedTideProvider appId="app_mlvms260Wex3bcTu" theme="shiny-light">
+    <FeedTideProvider appId="app_mlvms260Wex3bcTu" theme="light">
       <div className="app">
         <h1>@feedtide/react sample</h1>
         <p className="subtitle">
